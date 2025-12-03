@@ -1,11 +1,12 @@
 #include<stdio.h>
+int sum(int n){
+	if(n==0) return 0;
+	else return n+sum(n-1);
+}
 int main(){
 	int n;
-	printf("No. of natural no. : ");
+	printf("NUMBER = ");
 	scanf("%d",&n);
-	int s=0;
-	for(int i=1;i<=n;i++){
-		s+=i;
-	}
-	printf("sum of %d natural no. is %d",n,s);
-}
+	int a=sum(n);
+	printf("SUM from 0 to n is %d",a);
+} 

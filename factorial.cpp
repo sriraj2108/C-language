@@ -1,19 +1,12 @@
 #include<stdio.h>
+int fac(int n){
+	if(n<=1) return 1;
+	else return n*fac(n-1);
+}
 int main(){
-	int n;
-	printf("No. is : ");
-	scanf("%d",&n);
-	if(n<0){
-		printf("Factorial isn't possible ");
-	}
-	else if(n==1 || n==0){
-		printf("Factorial of %d is 1",n);
-	}
-	else{
-		unsigned long long f=1;
-	for(int i=1;i<=n;i++){
-		f*=i;
-	}
-	printf("Factorial of %d is %llu",n,f);
-	}
+	int a;
+	printf("number = ");
+	scanf("%d",&a);
+	int f=fac(a);
+	printf("Factorial of %d is %d",a,f);
 }
